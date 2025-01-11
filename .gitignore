@@ -12,3 +12,4 @@ task_manager/__pycache__/
 .env
 .ruff_cache
 .python_version
+db.sqlite3
