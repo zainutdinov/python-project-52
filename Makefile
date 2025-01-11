@@ -12,3 +12,7 @@ lint:
 
 lint-fix:
 	uv run ruff check --fix .
+
+migrate:
+	uv run python manage.py makemigrations && \
+	uv run python manage.py migrate
