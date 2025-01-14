@@ -1,12 +1,12 @@
-from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 
 from .forms import UserCreateForm, UserUpdateForm
-from .models import User
 from .mixins import UserPermissionRequiredMixin
+from .models import User
 
 
 class IndexView(ListView):
@@ -23,7 +23,8 @@ class UserCreateView(SuccessMessageMixin, CreateView):
     success_message = 'Пользователь успешно зарегистрирован'
 
 
-class UserUpdateView(UserPermissionRequiredMixin, SuccessMessageMixin, LoginRequiredMixin, UpdateView):
+class UserUpdateView(UserPermissionRequiredMixin, SuccessMessageMixin,
+                     LoginRequiredMixin, UpdateView):
     model = User
     form_class = UserUpdateForm
     template_name = 'users_update.html'
@@ -32,7 +33,8 @@ class UserUpdateView(UserPermissionRequiredMixin, SuccessMessageMixin, LoginRequ
     success_message = 'Пользователь успешно изменен'
 
 
-class UserDeleteView(UserPermissionRequiredMixin, SuccessMessageMixin, LoginRequiredMixin, DeleteView):
+class UserDeleteView(UserPermissionRequiredMixin, SuccessMessageMixin,
+                     LoginRequiredMixin, DeleteView):
     model = User
     template_name = 'users_delete.html'
     success_url = reverse_lazy('users_list')

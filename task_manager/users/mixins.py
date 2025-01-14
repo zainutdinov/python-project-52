@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 
+
 class UserPermissionRequiredMixin:
     """
     Миксин для проверки прав на редактирование или удаление пользователей.
