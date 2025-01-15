@@ -4,9 +4,10 @@ from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 
-from .models import Status
-from .forms import StatusCreateForm
 from task_manager.mixins import LoginPermissionRequiredMixin
+
+from .forms import StatusCreateForm
+from .models import Status
 
 
 class IndexView(LoginPermissionRequiredMixin, LoginRequiredMixin,
