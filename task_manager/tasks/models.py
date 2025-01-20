@@ -1,5 +1,6 @@
 from django.db import models
 
+from task_manager.labels.models import Label
 from task_manager.statuses.models import Status
 from task_manager.users.models import User
 
@@ -13,7 +14,13 @@ class Task(models.Model):
     executor = models.ForeignKey(User, on_delete=models.PROTECT, null=True,
                                  blank=True, related_name='executed_tasks')
     created_at = models.DateTimeField(auto_now_add=True)
+    label_set = models.ManyToManyField(Label, through='Membership', blank=True)
 
     class Meta:
         verbose_name = 'Задача'
         verbose_name_plural = 'Задачи'
+
+
+class Membership(models.Model):
+    label = models.ForeignKey(Label, on_delete=models.PROTECT)
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)

@@ -13,3 +13,4 @@ class AuthorRequiredMixin:
                            extra_tags="danger")
             return HttpResponseRedirect(self.success_url)
         return super().dispatch(request, *args, **kwargs)
+

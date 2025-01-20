@@ -1,14 +1,15 @@
-from .models import Task
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
-from .forms import TaskCreateForm
-from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
-from task_manager.mixins import LoginPermissionRequiredMixin
-from .mixins import AuthorRequiredMixin
+from django.urls import reverse_lazy
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.list import ListView
 
+from task_manager.mixins import LoginPermissionRequiredMixin
+
+from .forms import TaskCreateForm
+from .mixins import AuthorRequiredMixin
+from .models import Task
 
 
 class IndexView(LoginPermissionRequiredMixin, LoginRequiredMixin,

@@ -6,13 +6,14 @@ from .models import Task
 class TaskCreateForm(forms.ModelForm):
     class Meta():
         model = Task
-        fields = ['name', 'description', 'status', 'executor']
+        fields = ['name', 'description', 'status', 'executor', 'label_set']
 
         labels = {
             'name': 'Имя',
             'description': 'Описание',
             'status': 'Статус',
             'executor': 'Исполнитель',
+            'label_set': 'Метки',
         }
         status = forms.ChoiceField(initial='---------',
                                    widget=forms.Select(
@@ -25,3 +26,4 @@ class TaskCreateForm(forms.ModelForm):
                                      widget=forms.Select(
                                          attrs={'size': 10}
                                      ))
+        label_set = forms.MultipleChoiceField()

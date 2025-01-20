@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.db.models import ProtectedError
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 
@@ -18,3 +19,19 @@ class LoginPermissionRequiredMixin:
             )
             return HttpResponseRedirect(self.login_url)
         return super().dispatch(request, *args, **kwargs)
+    
+
+class DeletionRestricted:
+    """
+    Миксин для проверки, что обьект не используется и обработки исключения,
+    если обьект используется и его невозможно удалить.
+    """
+    reject_message = None
+    reject_url = None
+
+    def post(self, request, *args, **kwargs):
+        try:
+            return super().post(request, *args, **kwargs)
+        except ProtectedError:
+            messages.error(request, self.reject_message, extra_tags="danger")
+            return HttpResponseRedirect(self.reject_url)

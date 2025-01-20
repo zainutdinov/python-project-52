@@ -29,7 +29,10 @@
             <div class="col">
               <h6>Метки:</h6>
               <ul>
-              </ul>
+                {% for label in task.label_set.all %}
+                 <li>{{ label.name }}</li>
+                {% endfor %}
+            </ul>
             </div>
           </div>
           <div class="row p-1">
