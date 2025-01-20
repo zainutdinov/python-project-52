@@ -4,19 +4,22 @@ from django.urls import reverse_lazy
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
+from django_filters.views import FilterView
 
 from task_manager.mixins import LoginPermissionRequiredMixin
 
 from .forms import TaskCreateForm
 from .mixins import AuthorRequiredMixin
 from .models import Task
+from .filters import TaskFilter
 
 
 class IndexView(LoginPermissionRequiredMixin, LoginRequiredMixin,
-                ListView):
+                FilterView, ListView):
     model = Task
     template_name = 'tasks_list.html'
     context_object_name = 'tasks'
+    filterset_class = TaskFilter
 
 
 class TaskDetailView(LoginPermissionRequiredMixin, LoginRequiredMixin,
