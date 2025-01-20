@@ -8,10 +8,10 @@ from django_filters.views import FilterView
 
 from task_manager.mixins import LoginPermissionRequiredMixin
 
+from .filters import TaskFilter
 from .forms import TaskCreateForm
 from .mixins import AuthorRequiredMixin
 from .models import Task
-from .filters import TaskFilter
 
 
 class IndexView(LoginPermissionRequiredMixin, LoginRequiredMixin,
