@@ -1,0 +1,26 @@
+[
+    {
+      "model": "tasks.task",
+      "pk": 1,
+      "fields": {
+        "name": "Buy Donuts",
+        "description": "Homer needs to restock his supply of donuts before he runs out and panics.",
+        "author": 1,
+        "executor": 3,
+        "status": 3,
+        "created_at": "2025-01-20T15:30:00.000Z"
+      }
+    },
+    {
+      "model": "tasks.task",
+      "pk": 2,
+      "fields": {
+        "name": "Clean the House",
+        "description": "Marge wants the house spotless before Patty and Selma visit.",
+        "author": 3,
+        "executor": 1,
+        "status": 2,
+        "created_at": "2025-01-21T10:00:00.000Z"
+      }
+    }
+  ]

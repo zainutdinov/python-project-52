@@ -1,0 +1,45 @@
+{
+    "create": {
+      "valid": {
+        "username": "Donut_Lover",
+        "first_name": "Homer",
+        "last_name": "Simpson",
+        "password1": "donutsLove123",
+        "password2": "donutsLove123"
+      },
+      "invalid_username": {
+        "username": "Donut&Lover",
+        "first_name": "Homer",
+        "last_name": "Simpson",
+        "password1": "donutsLove123",
+        "password2": "donutsLove123"
+      },
+      "invalid_password": {
+        "username": "Donut_Lover",
+        "first_name": "Homer",
+        "last_name": "Simpson",
+        "password1": "1",
+        "password2": "1"
+      },
+      "invalid_password_confirm": {
+        "username": "Donut_Lover",
+        "first_name": "Homer",
+        "last_name": "Simpson",
+        "password1": "donutsLove123",
+        "password2": "donutsLove124"
+      }
+    },
+    "update": {
+      "username": "Blue_Hair",
+      "first_name": "Marge",
+      "last_name": "Simpson",
+      "password1": "blueHair456",
+      "password2": "blueHair456"
+    },
+    "list": {
+      "id": "1",
+      "username": "Homer",
+      "full_name": "Homer Simpson",
+      "date_joined": "19.01.2025 09:00"
+    }
+  }

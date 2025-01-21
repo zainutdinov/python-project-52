@@ -20,7 +20,8 @@ jobs:
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
           make install
-      - name: Run linter
+      - name: Run linter and pytest
         run: |
           make lint
+          make test
 

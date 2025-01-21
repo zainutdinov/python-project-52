@@ -1,0 +1,25 @@
+{
+  "create": {
+    "name": "Task1",
+    "description": "Desc1",
+    "executor": 1,
+    "status": 1
+  },
+  "update": {
+    "name": "Task2",
+    "description": "",
+    "executor": 2,
+    "status": 2
+  },
+  "list": {
+    "id": 1,
+    "url": "/tasks/1/",
+    "name": "Buy Donuts",
+    "description": "Homer needs to restock his supply of donuts before he runs out and panics.",
+    "author": "Homer Simpson",
+    "executor": "Bart Simpson",
+    "status": "Completed (Barely Made It)",
+    "created_at": "20.01.2025 15:30",
+    "label_set": ["D'oh!", "Meh"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "create": {
+      "name": "Label1"
+    },
+    "update": {
+      "name": "Label2"
+    },
+    "list": {
+      "id": "1",
+      "name": "D'oh!",
+      "created_at": "19.01.2025 09:00"
+    }
+  }

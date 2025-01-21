@@ -9,7 +9,7 @@ class AuthorRequiredMixin:
     def dispatch(self, request, *args, **kwargs):
         task = self.get_object()
         if task.author != request.user:
-            messages.error(request, "Только автор может удалить эту задачу.", 
+            messages.error(request, "Задачу может удалить только ее автор", 
                            extra_tags="danger")
             return HttpResponseRedirect(self.success_url)
         return super().dispatch(request, *args, **kwargs)

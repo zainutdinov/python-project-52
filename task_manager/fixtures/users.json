@@ -1,0 +1,35 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "Homer",
+            "first_name": "Homer",
+            "last_name": "Simpson",
+            "password": "donutsLove123",
+            "date_joined": "2025-01-19T09:00:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "Marge",
+            "first_name": "Marge",
+            "last_name": "Simpson",
+            "password": "blueHair456",
+            "date_joined": "2025-01-20T10:00:00Z"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "Bart",
+            "first_name": "Bart",
+            "last_name": "Simpson",
+            "password": "eatMyShorts789",
+            "date_joined": "2025-01-21T15:00:00Z"
+        }
+    }
+]

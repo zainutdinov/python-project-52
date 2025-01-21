@@ -1,10 +1,11 @@
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import ProtectedError
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 
 
-class LoginPermissionRequiredMixin:
+class LoginPermissionRequiredMixin(LoginRequiredMixin):
     """
     Миксин для проверки авторизации.
     """

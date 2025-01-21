@@ -52,8 +52,8 @@ class TaskUpdateView(LoginPermissionRequiredMixin, LoginRequiredMixin,
     success_message = 'Задача успешно изменена'
 
 
-class TaskDeleteView(AuthorRequiredMixin, LoginPermissionRequiredMixin, 
-                     LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+class TaskDeleteView(LoginPermissionRequiredMixin, LoginRequiredMixin,
+                     SuccessMessageMixin, AuthorRequiredMixin, DeleteView):
     model = Task
     context_object_name = 'task'
     template_name = 'tasks_delete.html'

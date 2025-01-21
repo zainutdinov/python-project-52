@@ -1,0 +1,13 @@
+{
+  "create": {
+    "name": "Status1"
+  },
+  "update": {
+    "name": "Status2"
+  },
+  "list": {
+    "id": "1",
+    "name": "Planned",
+    "created_at": "19.01.2025 10:00"
+  }
+}
