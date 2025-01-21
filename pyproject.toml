@@ -23,3 +23,6 @@ dependencies = [
 dev = [
     "ruff>=0.8.6",
 ]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "task_manager.settings"

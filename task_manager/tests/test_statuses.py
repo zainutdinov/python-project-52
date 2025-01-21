@@ -1,12 +1,12 @@
 import json
 from pathlib import Path
 
-from django.contrib.auth.models import User
 from django.contrib.messages import get_messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.test import Client, TestCase
 from django.urls import reverse_lazy
 
+from task_manager.users.models import User
 from task_manager.statuses.models import Status
 
 APP_DIR = Path(__file__).resolve().parent.parent
