@@ -1,7 +1,9 @@
 from django import forms
 
-from .models import Task
 from task_manager.users.models import User
+
+from .models import Task
+
 
 class TaskCreateForm(forms.ModelForm):
     class Meta():
