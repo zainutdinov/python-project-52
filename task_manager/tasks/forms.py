@@ -5,7 +5,13 @@ from task_manager.users.models import User
 from .models import Task
 
 
+class CustomChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, obj):
+        return f'{obj.get_full_name()}'
+
+
 class TaskCreateForm(forms.ModelForm):
+
     class Meta():
         model = Task
         fields = ['name', 'description', 'status', 'executor', 'label_set']
@@ -24,10 +30,9 @@ class TaskCreateForm(forms.ModelForm):
                                            'size': 2,
                                        }
                                    ))
-        executor = forms.ModelChoiceField(queryset=User.objects.all(),
-                                          widget=forms.Select(attrs={
-                                              'size': 10
-                                              }),
-                                          empty_label='---------',
-                                        )
+        executor = CustomChoiceField(
+        queryset=User.objects.all(),
+        required=False,
+        widget=forms.Select(attrs={'class': 'form-select'})
+        )
         label_set = forms.MultipleChoiceField()
