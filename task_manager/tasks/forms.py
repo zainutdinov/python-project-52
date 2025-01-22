@@ -1,13 +1,6 @@
 from django import forms
 
-from task_manager.users.models import User
-
 from .models import Task
-
-
-class CustomChoiceField(forms.ModelChoiceField):
-    def label_from_instance(self, obj):
-        return f'{obj.get_full_name()}'
 
 
 class TaskCreateForm(forms.ModelForm):
@@ -30,9 +23,8 @@ class TaskCreateForm(forms.ModelForm):
                                            'size': 2,
                                        }
                                    ))
-        executor = CustomChoiceField(
-        queryset=User.objects.all(),
-        required=False,
-        widget=forms.Select(attrs={'class': 'form-select'})
-        )
+        executor = forms.ChoiceField(initial='---------',
+                                     widget=forms.Select(
+                                         attrs={'size': 10}
+                                     ))
         label_set = forms.MultipleChoiceField()
