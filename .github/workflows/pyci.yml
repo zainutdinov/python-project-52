@@ -29,6 +29,7 @@ jobs:
         if: github.ref_name == 'main'
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          DJANGO_SETTINGS_MODULE: task_manager.settings
         with:
           coverageCommand: make test-coverage
           debug: true
