@@ -4,13 +4,7 @@
 
 <div align="center">
 
-[![Actions Status](https://github.com/zainutdinov/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/zainutdinov/python-project-52/actions)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/716ca67008ef14b45bf1/maintainability)](https://codeclimate.com/github/zainutdinov/python-project-52/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/716ca67008ef14b45bf1/test_coverage)](https://codeclimate.com/github/zainutdinov/python-project-52/test_coverage)
-
-[![Python CI](https://github.com/zainutdinov/python-project-52/actions/workflows/pyci.yml/badge.svg)](https://github.com/zainutdinov/python-project-52/actions/workflows/pyci.yml)
+[![Actions Status](https://github.com/zainutdinov/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/zainutdinov/python-project-52/actions)[![Maintainability](https://api.codeclimate.com/v1/badges/716ca67008ef14b45bf1/maintainability)](https://codeclimate.com/github/zainutdinov/python-project-52/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/716ca67008ef14b45bf1/test_coverage)](https://codeclimate.com/github/zainutdinov/python-project-52/test_coverage)[![Python CI](https://github.com/zainutdinov/python-project-52/actions/workflows/pyci.yml/badge.svg)](https://github.com/zainutdinov/python-project-52/actions/workflows/pyci.yml)
 
 </div>
 
