@@ -22,3 +22,6 @@ test:
 
 test-coverage:
 	DJANGO_SETTINGS_MODULE=task_manager.settings uv run pytest --cov=task_manager --cov-report=xml
+
+make dev:
+	uv run python manage.py runserver
