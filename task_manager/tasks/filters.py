@@ -12,22 +12,25 @@ class TaskFilter(django_filters.FilterSet):
     status = ModelChoiceFilter(
         queryset=Status.objects.all(),
         label='Статус',
+        required=False,
         empty_label='---------',
-        widget=forms.Select(attrs={'class': 'form-control'})
+        widget=forms.Select(attrs={'class': 'form-select'})
     )
     
     executor = ModelChoiceFilter(
         queryset=User.objects.all(),
         label='Исполнитель',
+        required=False,
         empty_label='---------',
-        widget=forms.Select(attrs={'class': 'form-control'})
+        widget=forms.Select(attrs={'class': 'form-select'})
     )
     
     label_set = ModelChoiceFilter(
         queryset=Label.objects.all(),
         label='Метка',
+        required=False,
         empty_label='---------',
-        widget=forms.Select(attrs={'class': 'form-control'})
+        widget=forms.Select(attrs={'class': 'form-select'})
     )
     
     self_tasks = BooleanFilter(

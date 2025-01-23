@@ -5,26 +5,7 @@
     <div class="card mb-3">
       <div class="card-body bg-light">
         <form class="form-inline center" method="get">
-          <div class="mb-3">
-            {{ filter.form.status.label_tag }}
-            {{ filter.form.status }}
-            </div>
-            <div class="mb-3">
-                {{ filter.form.executor.label_tag }}
-                {{ filter.form.executor }}
-            </div>
-            <div class="mb-3">
-                {{ filter.form.label_set.label_tag }}
-                {{ filter.form.label_set }}
-            </div>
-            <div class="mb-3">
-              <div class="form-check">
-                {{ filter.form.self_tasks.as_widget|safe }}
-                <label class="form-check-label" for="{{ filter.form.self_tasks.id_for_label }}">
-                {{ filter.form.self_tasks.label }}
-                </label>
-              </div>
-            </div>
+            {{ filter.form.as_p }}
             <input class="btn btn-primary" type="submit" value="Показать">
         </form>
       </div>
