@@ -59,7 +59,7 @@ make dev
 ```
 URL-адрес сервера: http://127.0.0.1:8000.
 
-### При деплое на PaaS установите переменные ACCESS_TOKEN, DATABASE_URL, SECRET_KEY
+#### При деплое на PaaS установите переменные ACCESS_TOKEN, DATABASE_URL, SECRET_KEY
 
 - В настройках сервиса установите команды
 
