@@ -19,3 +19,6 @@ migrate:
 
 test:
 	uv run python manage.py test
+
+test-coverage:
+	uv run pytest --cov=task_manager --cov-report xml
