@@ -2,17 +2,17 @@
 <h1>Менеджер задач / Task manager</h1>
 </div>
 
-### Hexlet tests and linter status:
+<div align="center">
+
 [![Actions Status](https://github.com/zainutdinov/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/zainutdinov/python-project-52/actions)
 
-### Code climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/716ca67008ef14b45bf1/maintainability)](https://codeclimate.com/github/zainutdinov/python-project-52/maintainability)
 
-### Test Coverage:
 [![Test Coverage](https://api.codeclimate.com/v1/badges/716ca67008ef14b45bf1/test_coverage)](https://codeclimate.com/github/zainutdinov/python-project-52/test_coverage)
 
-### Python CI Badge
 [![Python CI](https://github.com/zainutdinov/python-project-52/actions/workflows/pyci.yml/badge.svg)](https://github.com/zainutdinov/python-project-52/actions/workflows/pyci.yml)
+
+</div>
 
 ### Render
 https://task-manager-tst7.onrender.com
@@ -65,7 +65,7 @@ make dev
 ```
 URL-адрес сервера: http://127.0.0.1:8000.
 
-# При деплое на PaaS установите переменные ACCESS_TOKEN, DATABASE_URL, SECRET_KEY
+### При деплое на PaaS установите переменные ACCESS_TOKEN, DATABASE_URL, SECRET_KEY
 
 - В настройках сервиса установите команды
 
