@@ -30,8 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-+=dj_@!pr(8sz^$rik=0e9^*+6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-HOSTNAME = os.getenv('HOSTNAME')
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'webserver', HOSTNAME]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'webserver', 'task-manager-tst7.onrender.com']
 
 
 # Application definition
