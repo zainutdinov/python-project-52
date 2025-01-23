@@ -20,6 +20,6 @@
     "executor": "Bart Simpson",
     "status": "Completed (Barely Made It)",
     "created_at": "20.01.2025 15:30",
-    "label_set": ["D'oh!", "Meh"]
+    "labels": ["D'oh!", "Meh"]
   }
 }

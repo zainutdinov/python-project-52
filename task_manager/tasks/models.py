@@ -14,7 +14,7 @@ class Task(models.Model):
     executor = models.ForeignKey(User, on_delete=models.PROTECT, null=True,
                                  blank=True, related_name='executed_tasks')
     created_at = models.DateTimeField(auto_now_add=True)
-    label_set = models.ManyToManyField(Label, through='Membership', blank=True)
+    labels = models.ManyToManyField(Label, through='Membership', blank=True)
 
     class Meta:
         verbose_name = 'Задача'

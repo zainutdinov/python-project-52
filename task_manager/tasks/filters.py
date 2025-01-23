@@ -25,7 +25,7 @@ class TaskFilter(django_filters.FilterSet):
         widget=forms.Select(attrs={'class': 'form-select'})
     )
     
-    label_set = ModelChoiceFilter(
+    labels = ModelChoiceFilter(
         queryset=Label.objects.all(),
         label='Метка',
         required=False,
@@ -47,4 +47,4 @@ class TaskFilter(django_filters.FilterSet):
 
     class Meta:
         model = Task
-        fields = ['status', 'executor', 'label_set', 'self_tasks']
+        fields = ['status', 'executor', 'labels', 'self_tasks']

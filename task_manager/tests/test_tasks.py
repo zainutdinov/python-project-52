@@ -37,7 +37,7 @@ class TaskTestCase(TestCase):
         self.label_2 = Label.objects.get(pk=2)
 
         self.task_1 = Task.objects.get(pk=1)
-        self.task_1.label_set.set([self.label_1, self.label_2])
+        self.task_1.labels.set([self.label_1, self.label_2])
         self.task_2 = Task.objects.get(pk=2)
         self.tasks_count = Task.objects.count()
 
@@ -230,5 +230,5 @@ class TestTaskDetailView(TaskTestCase):
         self.assertInHTML(task_data['author'], page)
         self.assertInHTML(task_data['executor'], page)
         self.assertInHTML(task_data['created_at'], page)
-        self.assertInHTML(task_data['label_set'][0], page)
-        self.assertInHTML(task_data['label_set'][1], page)
+        self.assertInHTML(task_data['labels'][0], page)
+        self.assertInHTML(task_data['labels'][1], page)

@@ -31,7 +31,7 @@ class LabelTestCase(TestCase):
         self.label_2 = Label.objects.get(pk=2)
         self.label_3 = Label.objects.get(pk=3)
         self.count = Label.objects.count()
-        self.task.label_set.set([self.label_1, self.label_2])
+        self.task.labels.set([self.label_1, self.label_2])
 
 
 class TestLabelsListView(LabelTestCase):
