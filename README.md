@@ -5,8 +5,14 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/zainutdinov/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/zainutdinov/python-project-52/actions)
 
+### Code climate
+[![Maintainability](https://api.codeclimate.com/v1/badges/716ca67008ef14b45bf1/maintainability)](https://codeclimate.com/github/zainutdinov/python-project-52/maintainability)
+
 ### Test Coverage:
 [![Test Coverage](https://api.codeclimate.com/v1/badges/716ca67008ef14b45bf1/test_coverage)](https://codeclimate.com/github/zainutdinov/python-project-52/test_coverage)
+
+### Python CI Badge
+[![Python CI](https://github.com/zainutdinov/python-project-52/actions/workflows/pyci.yml/badge.svg)](https://github.com/zainutdinov/python-project-52/actions/workflows/pyci.yml)
 
 ### Render
 https://task-manager-tst7.onrender.com
