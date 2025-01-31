@@ -219,8 +219,6 @@ dependencies = [
     { name = "django-filter" },
     { name = "gunicorn" },
     { name = "psycopg2-binary" },
-    { name = "pytest-cov" },
-    { name = "pytest-django" },
     { name = "python-dotenv" },
     { name = "rollbar" },
     { name = "uvicorn" },
@@ -228,6 +226,8 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "pytest-cov" },
+    { name = "pytest-django" },
     { name = "ruff" },
 ]
 
@@ -239,15 +239,17 @@ requires-dist = [
     { name = "django-filter", specifier = ">=24.3" },
     { name = "gunicorn", specifier = ">=23.0.0" },
     { name = "psycopg2-binary", specifier = ">=2.9.10" },
-    { name = "pytest-cov", specifier = ">=6.0.0" },
-    { name = "pytest-django", specifier = ">=4.9.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "rollbar", specifier = ">=1.1.1" },
     { name = "uvicorn", specifier = ">=0.34.0" },
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "ruff", specifier = ">=0.8.6" }]
+dev = [
+    { name = "pytest-cov", specifier = ">=6.0.0" },
+    { name = "pytest-django", specifier = ">=4.9.0" },
+    { name = "ruff", specifier = ">=0.8.6" },
+]
 
 [[package]]
 name = "idna"
