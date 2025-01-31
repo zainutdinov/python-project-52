@@ -1,18 +1,10 @@
-import json
-from pathlib import Path
-
 from django.contrib.auth import get_user_model
 from django.contrib.messages import get_messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.test import Client, TestCase
 from django.urls import reverse_lazy
 
-APP_DIR = Path(__file__).resolve().parent.parent
-
-
-def from_json(file_name):
-    with open(APP_DIR / 'fixtures' / file_name) as file:
-        return json.load(file)
+from .utils import from_json
 
 
 class UserTestCase(TestCase):

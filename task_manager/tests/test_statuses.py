@@ -1,6 +1,3 @@
-import json
-from pathlib import Path
-
 from django.contrib.messages import get_messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.test import Client, TestCase
@@ -9,12 +6,7 @@ from django.urls import reverse_lazy
 from task_manager.statuses.models import Status
 from task_manager.users.models import User
 
-APP_DIR = Path(__file__).resolve().parent.parent
-
-
-def from_json(file_name):
-    with open(APP_DIR / 'fixtures' / file_name) as file:
-        return json.load(file)
+from .utils import from_json
 
 
 class StatusTestCase(TestCase):
