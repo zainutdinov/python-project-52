@@ -1,7 +1,7 @@
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Add your description here"
+description = "A task management system that allows assigning executors and changing task statuses"
 readme = "README.md"
 requires-python = ">=3.11.11"
 dependencies = [
@@ -11,8 +11,6 @@ dependencies = [
     "django-filter>=24.3",
     "gunicorn>=23.0.0",
     "psycopg2-binary>=2.9.10",
-    "pytest-cov>=6.0.0",
-    "pytest-django>=4.9.0",
     "python-dotenv>=1.0.1",
     "rollbar>=1.1.1",
     "uvicorn>=0.34.0",
@@ -21,6 +19,8 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ruff>=0.8.6",
+    "pytest-cov>=6.0.0",
+    "pytest-django>=4.9.0",
 ]
 
 [tool.pytest.ini_options]
